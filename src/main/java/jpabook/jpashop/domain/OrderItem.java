@@ -9,10 +9,12 @@ public class OrderItem {
     @Column(name = "ORDER_ITEM_ID")
     private Long id;
 
+    // 단방향 연관관계 설정
     @ManyToOne
     @JoinColumn(name = "ORDER_ID")
     private Order order;
 
+    // 단방향 연관관계 설정
     @ManyToOne
     @JoinColumn(name = "ITEM_ID")
     private Item item;
