@@ -18,6 +18,10 @@ public class Order {
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
+    @OneToOne
+    @JoinColumn(name = "DELIVERY_ID")
+    private Delivery delivery;
+
     // 양방향 연관관계 설정
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
