@@ -7,8 +7,9 @@ import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 //@Inheritance(strategy = InheritanceType.JOINED)
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) 실무에서 쓰면 안됨
 @DiscriminatorColumn
-public abstract class Item {
+public abstract class Item extends BaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "ITEM_ID")
